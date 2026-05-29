@@ -15,7 +15,7 @@ export default async function CountriesPage() {
       <div className="page-header">
         <h1 className="page-title">Explore Countries</h1>
         <p className="page-description">
-          Showing {countries.slice(0, 20).length} countries from around the world.
+          Showing {countries.length} countries from around the world.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export default async function CountriesPage() {
         </div>
       ) : (
         <div className="countries-grid">
-          {countries.slice(0, 20).map((country) => (
+          {countries.map((country) => (
             <CountryCard key={country.cca3} country={country} />
           ))}
         </div>
